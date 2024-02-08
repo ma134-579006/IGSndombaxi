@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Progecto de gerenciamento escolar - Login</title>
+    <meta name="author" content="Manuel Ndombaxi & Edgar Venacio">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script> 
+    <script src="https://threejs.org/build/three.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans,wht@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+  
+
+     
+
+  
+
+
+
+<div style="background-image: url('img/manu.png');">
+
+
+<div class="login-form" >
+   
+    
+    <div class="container">
+       
+
+
+     <div class="main-div">
+        <img src="/img/igs2.png" class="img-3d" >
+        <div class="text-header">
+            <h2>Cadastro dos Funcionários</h2>
+            <p>Crie seu usuário no Sistema</p>
+        </div>
+        <form method="post" th:object="${usuario}" action="salvarUsuario" >
+
+            <div class="form-group">
+                <input type="email" th:field="*{email}"  class="form-control" placeholder="Email" required>
+            </div>
+        
+            <div class="form-group">
+                <input type="text" th:field="*{user}"   class="form-control" placeholder="Username" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" th:field="*{senha}"  class="form-control" placeholder="Insira sua senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="button" class="btn btn-info">Voltar</button>
+
+            
+          
+
+        </form>
+     </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+    </body>
+    </html>

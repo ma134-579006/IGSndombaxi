@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Encontrar Aluno</title>
+    <meta name="author" content="Manuel Ndombaxi & Edgar Venacio">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans,wht@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div style="background-image: url('img/alunos.png');">
+
+    <div th:replace="Fragmentos/fragmentos :: cabecalho"></div>
+   
+    <div class="container" style="margin-top: 50px;">
+      <h4 class="text-white">Encontrar Estudantes</h4>
+      <hr>
+      <br>
+
+         <form method="post" action="pesquisar-estudante">
+         
+          <div class="input-group col-6 offset-3">
+            <input class="form-control" placeholder="Busque por o nome do estudante...">
+            <div class="input-group-append ">
+              <button type="submit"  class="btn btn-primary btn-sm" style="font-size: 12px; padding: 5px 10px;">Pesquisar</button>
+            </div>
+          </div>
+
+         </form>
+
+
+
+      <hr>
+      
+      <div class="row">
+        <div class="card transparent-card-body" style="width: 288px;">
+          
+         <a  th:href="@{/alunos-ativos}"> <img src="/img/Alunos-Ativos.png "  class="img-2d">
+         </a> 
+            <div class="card-body">
+                <h5 class="card-title text-white"> Estudantes Ativos no Sistema</h5>
+                <p class="card-text text-white">Busque por todos os alunos que estão ativos no Sistema</p>
+                <a  th:href= "@{/alunos-ativos}" class="btn btn-primary btn-sm" style="font-size: 12px; padding: 5px 10px;" >Clique Aqui!</a>
+               <!--<a class="btn btn-outline-primary">Clique Aqui!</a>--> 
+            </div>    
+        </div>
+         <!--alunos inativos -->
+         <div  class="card ml-4 transparent-card-body " style="width: 288px;">
+          <a th:href="@{/alunos-ativos}">
+            <img src="/img/concluidos.jpg " class="img-2d">
+
+          </a>
+         
+           <div class="card-body ">
+               <h5 class="card-title text-white"> Estudantes Inativos no Sistema</h5>
+               <p class="card-text text-white">Busque por todos os alunos que estão inativos no Sistema</p>
+               <a th:href= "@{/alunos-inativos}" class="btn btn-primary btn-sm" style="font-size: 12px; padding: 5px 10px;">Clique Aqui!</a>
+           </div>    
+       </div>
+
+       <!--Alunos cancelados-->
+       <div class="card ml-4 transparent-card-body" style="width: 288px;">
+
+        <a  th:href= "@{/alunos-cancelados}">
+          <img src="/img/Alunos-Cancelados.jpg " class="img-2d">
+        </a>
+         <div class="card-body ">
+             <h5 class="card-title text-white"> Estudantes Cancelados no Sistema</h5>
+             <p class="card-text text-white">Busque por todos os alunos que estão Calncelados no Sistema</p>
+             <a  th:href= "@{/alunos-cancelados}" class="btn btn-primary btn-sm" style="font-size: 12px; padding: 5px 10px;">Clique Aqui!</a>
+         </div>    
+     </div>
+
+     <!--Alunos Trancados-->
+     <div  class="card mt-4 transparent-card-body" style="width: 288px;">
+         <a th:href= "@{/alunos-trancados}">
+          <img src="/img/Alunos-Trancados.jpg " class="img-2d">
+         </a>       
+       <div class="card-body  ">
+           <h5 class="card-title text-white"> Estudantes Trancados no Sistema</h5>
+           <p class="card-text text-white">Busque por todos os alunos que estão Trancados no Sistema</p>
+           <a th:href= "@{/alunos-trancados}" class="btn btn-primary btn-sm" style="font-size: 12px; padding: 5px 10px;">Clique Aqui!</a>
+       </div>    
+   </div>
+
+
+      </div>
+
+      </div>
+
+
+
+
+
+      <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+      </body>
+      </html>
